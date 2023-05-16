@@ -1,0 +1,37 @@
+{
+   "value":{
+      "neck":87.8307424102715,
+      "lshoulder":179.00365210349506,
+      "rshoulder":-0.946951446773465,
+      "lelbow":5.345445372767093,
+      "relbow":174.83475895500422,
+      "lknee":33.82829591766255,
+      "rknee":146.94723410459952,
+      "lwrist":-167.19179689221875,
+      "rwrist":-12.576120480819576
+   },
+
+    "ins": {
+        "neck": ["radrizza la testa"],
+        "lshoulder": ["Raddrizza il  busto"], "rshoulder": ["Raddrizza il busto"],
+        "lelbow": ["allinea il gomito sinistro con la spalla"], "relbow": ["allinea il gomito destro con la spalla"],
+        "lknee": ["piega di piu il ginocchio sinistro"], "rknee": ["piega di piu il ginocchio destro"],
+        "rwrist": ["forma un angolo di novanta gradi con il gomito destro"], "lwrist": ["forma un angolo di novanta gradi con il gomito sinistro"]
+    },
+
+    "critical_joints": {
+        "neck": ["raddrizzare la testa"],
+        "lshoulder": ["raddrizzare il busto"], "rshoulder": ["raddrizzare il busto"],
+        "lelbow": ["allineare il gomito sinistro con la spalla"], "relbow": ["allineare il gomito destro con la spalla"],
+        "lknee": ["piegare bene il ginocchio"], "rknee": ["piegare bene il ginocchio"],
+        "rwrist": ["tenere un angolo di novanta gradi con il gomito destro"], "lwrist": ["tenere un angolo di novanta gradi con il gomito sinistro"]
+    },
+    
+    "show_correction": {
+        "neck": ["testa_dritta"],
+        "lshoulder": ["busto_dritto"], "rshoulder": ["busto_dritto"],
+        "lelbow": ["gomitoSx_allineato"], "relbow": ["gomitoDx_allineato"],
+        "lknee": ["ginocchioSx_piegato"], "rknee": ["ginocchioDx_piegato"],
+        "rwrist": ["gomitoDx_tenuto90"], "lwrist": ["gomitoSx_tenuto90"]
+    },
+}

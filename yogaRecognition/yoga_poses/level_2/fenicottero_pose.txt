@@ -1,0 +1,38 @@
+{
+   "value":{
+       "neck":81.67434966957316,
+       "lshoulder":178.31531568210374,
+       "rshoulder":0.48969559312922417,
+       "lelbow":-6.254032743916468,
+       "relbow":-174.28940686250036,
+       "lknee":90.54565759341573,
+       "rknee":78.15360586678057,
+       "lwrist":-179.83222367276912,
+       "rwrist":-2.151719472052871
+   },
+
+    "ins": {
+        "neck": ["raddrizza la testa"],
+        "lshoulder": ["raddrizza il busto"], "rshoulder": ["raddrizza il busto"],
+        "lelbow": ["allinea il braccio sinistro con la spalla"],"relbow": ["allinea il braccio destro con la spalla"],
+        "lknee": ["alza la gamba sinistra"], "rknee": ["stendi la gamba destra"],
+        "rwrist": ["stendi il braccio destro"], "lwrist": ["stendi il braccio sinistro"]
+    },
+
+    "critical_joints": {
+        "neck": ["raddrizzare la testa"],
+        "lshoulder": ["raddrizzare il busto"], "rshoulder": ["raddrizzare il busto"],
+        "lelbow": ["allineare il braccio sinistro con la spalla"], "relbow": ["allineare il braccio destro con la spalla"],
+        "lknee": ["alzare la gamba sinistra"], "rknee": ["stendere la gamba destra"],
+        "rwrist": ["stendere il braccio destro"], "lwrist": ["stendere il braccio sinistro"]
+    },
+    
+    "show_correction": {
+        "neck": ["testa_dritta"],
+        "lshoulder": ["busto_dritto"], "rshoulder": ["busto_dritto"],
+        "lelbow": ["braccioSx_allineato"], "relbow": ["braccioDx_allineato"],
+        "lknee": ["gambaSx_alzata"], "rknee": ["gambaDx_stesa"],
+        "rwrist": ["braccioDx_steso"], "lwrist": ["braccioSx_steso"]
+    }
+}
+

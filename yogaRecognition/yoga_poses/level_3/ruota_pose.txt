@@ -1,0 +1,29 @@
+{
+   "value":{
+      "neck":40.865328626263576,
+      "lshoulder":126.6070748126075,
+      "rshoulder":-44.10482628978893,
+      "lelbow":-37.273382380902774,
+      "relbow":82.52844082340764,
+      "lknee":6.809050179613406,
+      "rknee":76.53885169257703,
+      "lwrist":129.83387928142082,
+      "rwrist":-54.00396575002519
+   },
+
+    "ins": {
+        "neck": ["allinea la testa con il busto"],
+        "lshoulder": ["inclinati sulla destra"], "rshoulder": ["inclinati sulla destra"],
+        "lelbow": ["stendi il braccio sinistro in linea con la spalla"], "relbow": ["stendi il braccio  destro in linea con la spalla"],
+        "lknee": ["alza lateralmente la gamba sinistra"], "rknee": ["raddrizza la gamba destra"],
+        "rwrist": ["stendi il braccio destro"], "lwrist": ["stendi il braccio sinistro"]
+    },
+
+    "critical_joints": {
+        "neck": ["allineare la testa con il busto"],
+        "lshoulder": ["mantenere il busto frontale e inclinarlo verso destra"], "rshoulder": ["mantenere il busto frontale e inclinarlo verso destra"],
+        "lelbow": ["stendere il braccio sinistro e allinearlo con la spalla"], "relbow": ["stendere il braccio  destro e allinearlo con la spalla"],
+        "lknee": ["alzare lateralmente la gamba sinistra"], "rknee": ["tenere stesa la gamba destra"],
+        "rwrist": ["stendi il braccio destro"], "lwrist": ["stendi il braccio sinistro"]
+    }
+}

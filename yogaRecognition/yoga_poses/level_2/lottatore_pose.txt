@@ -1,0 +1,39 @@
+{
+   "value":{
+
+      "lshoulder":127.6004053401129,
+      "rshoulder":-50.19442890773481,
+      "lelbow":-43.196004883799404,
+      "relbow":122.50398895556249,
+      "lknee":58.83604938563977,
+      "rknee":136.78991060824606,
+      "lwrist":130.37667422348525,
+      "rwrist":-48.67139887615163
+   },
+
+   "ins": {
+
+     "lshoulder": ["inclina il busto verso destra"], "rshoulder": ["inclina il busto verso destra"],
+     "lelbow": ["allinea il braccio sinistro con la spalla"], "relbow": ["allinea il braccio destro con la spalla"],
+     "lknee": ["stendi e allunga la gamba sinistra, punta il piede in avanti"], "rknee": ["punta il piede destro verso l'esterno, piega il ginocchio destro a 90 gradi"],
+     "rwrist": ["stendi il braccio destro"], "lwrist": ["stendi il braccio sinistro"]
+   },
+
+   "critical_joints": {
+ 
+       "lshoulder": ["tenere il busto frontale e il bacino fermo e inclinare il busto verso destra"], 
+       "rshoulder": ["tenere il busto frontale e il bacino fermo e inclinare il busto verso destra"],
+       "lelbow": ["allineare il braccio sinistro con la spalla"], "relbow": ["allineare il braccio destro con la spalla"],
+       "lknee": ["stendere e allungare la gamba sinistra, puntando il piede in avanti"], "rknee": ["piegare il ginocchio destro e tenerlo perpendicolare al piede"],
+       "rwrist": ["stendere il braccio destro"], "lwrist": ["stendere il braccio sinistro"]}
+   },
+
+   "show_correction": {
+ 
+       "lshoulder": ["busto_inclinatoDx"], 
+       "rshoulder": ["busto_inclinatoDx"],
+       "lelbow": ["braccioSx_allineato"], "relbow": ["braccioDx_allineato"],
+       "lknee": ["gambaSx_stesa_piedeAvanti"], "rknee": ["ginocchio_tenuto90"],
+       "rwrist": ["braccioDx_steso"], "lwrist": ["braccioSx_steso"]}
+   }
+}

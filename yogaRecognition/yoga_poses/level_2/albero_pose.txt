@@ -1,0 +1,37 @@
+{
+   "value":{
+      "neck":92.32153058983273,
+      "lshoulder":-178.10661415425372,
+      "rshoulder":5.710593137499642,
+      "lelbow":5.425226368420328,
+      "relbow":177.49686022041507,
+      "lknee":98.62885606302491,
+      "rknee":143.94275394840975,
+      "lwrist":-161.62275083482652,
+      "rwrist":-10.875058247994115
+   },
+
+    "ins": {
+        "neck": ["guarda frontalmente"],
+        "lshoulder": ["raddrizza il busto"], "rshoulder": ["raddrizza il busto"],
+        "lelbow": ["allinea il braccio sinistro con la spalla"], "relbow": ["allinea il braccio destro con la spalla"],
+        "lknee": ["stendi la gamba sinistra"],  "rknee": ["solleva e piega la gamba destra"],
+        "rwrist": ["forma un angolo di novanta gradi con il gomito destro"], "lwrist": ["forma un angolo di novanta gradi con il gomito sinistro"]
+     },
+
+    "critical_joints": {
+        "neck": ["guardare frontalmente"],
+        "lshoulder": ["tenere dritto il busto"], "rshoulder": ["tenere dritto il busto"],
+        "lelbow": ["allineare il braccio sinistro con la spalla"], "relbow": ["allineare il braccio destro con la spalla"],
+        "lknee": ["stendere la gamba sinistra"], "rknee": ["sollevare e piegare la gamba destra"],
+        "rwrist": ["formare un angolo di novanta gradi con il gomito destro"], "lwrist": ["formare un angolo di novanta gradi con il gomito sinistro"]
+    },
+    
+    "show_correction": {
+        "neck": ["sguardo_davanti"],
+        "lshoulder": ["busto_dritto"], "rshoulder": ["busto_dritto"],
+        "lelbow": ["braccioSx_allineato"], "relbow": ["braccioDx_allineato"],
+        "lknee": ["gambaSx_stesa"], "rknee": ["gambaDx_stesa_sollevata"],
+        "rwrist": ["gomitoDx_tenuto90"], "lwrist": ["gomitoSx_tenuto90"]
+    }
+}

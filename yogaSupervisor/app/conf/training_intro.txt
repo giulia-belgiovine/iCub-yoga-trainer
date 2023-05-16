@@ -1,0 +1,8 @@
+Ora vi mostrero' delle pose di robot-yoga che dovrete riprodurre correttamente.
+Inizialmente potrete  contare sul mio aiuto!
+Infatti, dopo che vi avrò mostrato la posa potrete chiamarmi uno per volta.
+wait 2
+Io vi dirò se state facendo la posa correttamente, o se avete bisogno di fare degli aggiustamenti.
+Aproffitate del mio aiuto perchè dopo questa fase di allenamento vi testerò uno per volta per valutare le vostre capacità.
+Pronti per iniziare?
+wait 8

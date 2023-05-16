@@ -1,0 +1,260 @@
+<application>
+    <name>YogaTeacher</name>
+
+    <authors>
+        <author email="jonas.gonzalez@iit.it"> Giulia Belgiovine, Jonas Gonzalez </author>
+    </authors>
+
+    <!-- ======== MODULES ======== -->
+	<module>
+        <name>interactionInterface</name>
+		<parameters>--config yoga_pose.sh --context icub-interaction-demos</parameters>
+                <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>ctpService</name>
+		<parameters>--robot icub --part right_arm</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>ctpService</name>
+		<parameters>--robot icub --part left_arm</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>ctpService</name>
+		<parameters>--robot icub --part right_leg</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>ctpService</name>
+		<parameters>--robot icub --part left_leg</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>ctpService</name>
+		<parameters>--robot icub --part torso</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>YogaTeacher</name>
+        <tag>YogaTeacher</tag>
+        <node>icubsrv-gpu</node>
+    </module>
+
+    <module>
+        <name>objectDetector</name>
+        <parameters></parameters>
+        <node>icub-titan</node>
+    </module>
+
+    <module>
+        <name>yogaSupervisor</name>
+        <parameters>--pathSearch  /home/icub/Documents/Jonas/iCubYogaTeacher/yogaSupervisor/app/conf</parameters>
+        <node>icub-dell</node>
+    </module>
+
+
+    <!-- ========  Audio modules ========  !-->
+
+    <module>
+        <name> remoteInterface </name>
+        <parameters> </parameters>
+        <node> icub-head </node>
+    </module>
+
+    <module>
+        <name> audioPreprocessor </name>
+        <parameters> </parameters>
+        <node> icubsrv </node>
+    </module>
+
+
+    <module>
+        <name> remoteInterface_nc </name>
+        <parameters> </parameters>
+        <node> icubsrv </node>
+    </module>
+
+    <module>
+        <name> SpeechRecognition </name>
+        <parameters> </parameters>
+        <node> icubsrv </node>
+    </module>
+
+
+
+    <!-- ======== Visualization ======== -->
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /facesView</parameters>
+        <node>icubsrv</node>
+    </module>
+
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /poseView --compact</parameters>
+        <node>icubsrv</node>
+    </module>
+
+    <module>
+        <name>yarpview</name>
+        <parameters>--name /memoryView --compact</parameters>
+        <node>icubsrv</node>
+    </module>
+
+
+    <!-- Connections of the application -->
+
+
+    <!-- ======== OBJECTS DETECTORS ======== -->
+    <connection>
+        <from>/icub/camcalib/left/out</from>
+        <to>/ObjectsDetector/image:i</to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from>/ObjectsDetector/image:o</from>
+        <to>/facesView</to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from>/ObjectsDetector/objects:o</from>
+        <to>/iCubActions/soundLocaliser/faceCoordinate:i</to>
+        <protocol>tcp</protocol>
+    </connection>
+
+
+    <!-- ======== AUDIO ATTENTION ======== -->
+
+
+    <connection>
+        <from> /rawAudio:o  </from>
+        <to>   /SoundLocaliser/audio:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from> /SoundLocaliser/angle:o   </from>
+        <to>    /iKinGazeCtrl/angles:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from> /iKinGazeCtrl/angles:o   </from>
+        <to>   /SoundLocaliser/angle:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from> /rawAudio:o  </from>
+        <to>   /rawAudio:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from> /rawAudio:o  </from>
+        <to>   /SpeechToText/speech:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+   <connection>
+        <from> /rawAudioNC:o  </from>
+        <to>   /audioPreprocessor/rawAudio:i    </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+
+    <connection>
+        <from> /audioPreprocessor/rawPower:o </from>
+        <to>   /SpeechToText/power:i    </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+
+    <!-- ======== YogaTeacher ======== -->
+    <connection>
+        <from> /icub/camcalib/left/out</from>
+        <to>   /YogaTeacher/image:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from>  /YogaTeacher/speak:o </from>
+        <to>    /acapelaSpeak/speech:i </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from>   /YogaTeacher/image:o </from>
+        <to>    /poseView </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+    <connection>
+        <from>   /YogaTeacher/cmd:o </from>
+        <to>     /interactionInterface </to>
+        <protocol> tcp </protocol>
+    </connection>
+
+
+    <!-- ======== Person Recognition  ======== -->
+
+    <!-- ========  yogaSupervisor Connections ========  !-->
+
+    <connection>
+        <from>/SpeechToText/speech:o </from>
+        <to> /YogaSupervisor/words:i </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from>/YogaSupervisor/yogaTrainer:rpc  </from>
+        <to>/YogaTeacher</to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from>/YogaSupervisor/speech:o </from>
+        <to> /acapelaSpeak/speech:i </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+
+    <connection>
+        <from>/YogaSupervisor/speechToText:rpc </from>
+        <to> /SpeechToText </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from>/YogaSupervisor/soundLocaliser:rpc   </from>
+        <to> /SoundLocaliser </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+
+    <connection>
+        <from> /YogaTeacher/events:o </from>
+        <to> /YogaSupervisor/events:i </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+    <connection>
+        <from> /SoundLocaliser/events:o </from>
+        <to> /YogaSupervisor/events:i </to>
+        <protocol>tcp</protocol>
+    </connection>
+
+
+
+</application>

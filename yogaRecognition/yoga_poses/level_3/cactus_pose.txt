@@ -1,0 +1,29 @@
+{
+   "value":{
+      "neck":80.98067756861833,
+      "lshoulder":-177.24751459973132,
+      "rshoulder":1.0609116902642277,
+      "lelbow":3.0127875041833403,
+      "relbow":171.33261282004452,
+      "lknee":102.11384294556434,
+      "rknee":172.59308787150476,
+      "lwrist":-167.92565952012106,
+      "rwrist":-11.601511532012758
+   },
+
+    "ins": {
+        "neck": ["radrizza la testa"],
+        "lshoulder": ["raddrizza il busto"], "rshoulder": ["raddrizza il busto"],
+        "lelbow": ["allinea il braccio sinistro con la spalla"], "relbow": ["allinea il braccio destro con la spalla"],
+        "lknee": ["stendi la gamba sinistra"], "rknee": ["solleva e stendi la gamba destra"],
+        "rwrist": ["forma un angolo di novanta gradi con il gomito destro"], "lwrist": ["forma un angolo di novanta gradi con il gomito sinistro"]
+    },
+
+    "critical_joints": {
+        "neck": ["raddrizzare la testa"],
+        "lshoulder": ["raddrizzare il busto"], "rshoulder": ["raddrizzare il busto"],
+        "lelbow": ["allineare il braccio sinistro con la spalla"], "relbow": ["allineare il braccio destro con la spalla"],
+        "lknee": ["stendere la gamba sinistra"], "rknee": ["sollevare e stendere la gamba destra"],
+        "rwrist": ["formare un angolo di novanta gradi con il gomito destro"], "lwrist": ["formare un angolo di novanta gradi con il gomito sinistro"]
+    }
+}
